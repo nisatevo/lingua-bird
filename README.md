@@ -144,11 +144,13 @@ Create a PostgreSQL database and obtain its connection URL.
 
 Replace the following placeholders with your actual database credentials:
 
+```
 ```text
 <user>
 <password>
 <host>
 <port>
+```
 ```
 
 The connection URL should follow this format:
@@ -222,8 +224,10 @@ pnpm dev
 
 The application will normally be available at:
 
+```
 ```text
 http://localhost:3000
+```
 ```
 
 ## Tech Stack
