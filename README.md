@@ -322,4 +322,4 @@ This project is provided for educational and development purposes.
 
 ---
 
-**LinguaBird** — Learn languages. Build skills. Keep growing.
+**LinguaBird** — Learn languages. Build skills. Keep growing..
