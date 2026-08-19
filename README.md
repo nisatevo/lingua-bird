@@ -1,98 +1,68 @@
-<a name="readme-top"></a>
+# LinguaBird
 
-# Lingo - Interactive platform for language learning.
+LinguaBird is an interactive language-learning platform designed to make learning languages engaging, structured, and accessible.
 
-![Lingo - Interactive platform for language learning.](/.github/images/img_main.png "Lingo - Interactive platform for language learning.")
+## Table of Contents
 
-[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy "Ask Me Anything!")
-[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/duolingo-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/duolingo-clone/blob/main/LICENSE "GitHub license")
-[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/duolingo-clone/commits/main "Maintenance")
-[![GitHub branches](https://flat.badgen.net/github/branches/sanidhyy/duolingo-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/duolingo-clone/branches "GitHub branches")
-[![Github commits](https://flat.badgen.net/github/commits/sanidhyy/duolingo-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/duolingo-clone/commits "Github commits")
-[![GitHub issues](https://flat.badgen.net/github/issues/sanidhyy/duolingo-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/duolingo-clone/issues "GitHub issues")
-[![GitHub pull requests](https://flat.badgen.net/github/prs/sanidhyy/duolingo-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/duolingo-clone/pulls "GitHub pull requests")
-[![Vercel status](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://lingo-clone.vercel.app/ "Vercel status")
+* [Folder Structure](#folder-structure)
+* [Getting Started](#getting-started)
+* [Tech Stack](#tech-stack)
+* [Contributing](#contributing)
+* [Acknowledgements](#acknowledgements)
+* [Learn More](#learn-more)
+* [Deploy on Vercel](#deploy-on-vercel)
 
-<!-- Table of Contents -->
-<details>
+## Folder Structure
 
-<summary>
-
-# :notebook_with_decorative_cover: Table of Contents
-
-</summary>
-
-- [Folder Structure](#bangbang-folder-structure)
-- [Getting Started](#toolbox-getting-started)
-- [Screenshots](#camera-screenshots)
-- [Tech Stack](#gear-tech-stack)
-- [Stats](#wrench-stats)
-- [Contribute](#raised_hands-contribute)
-- [Acknowledgements](#gem-acknowledgements)
-- [Buy Me a Coffee](#coffee-buy-me-a-coffee)
-- [Follow Me](#rocket-follow-me)
-- [Learn More](#books-learn-more)
-- [Deploy on Vercel](#page_with_curl-deploy-on-vercel)
-- [Give A Star](#star-give-a-star)
-- [Star History](#star2-star-history)
-- [Give A Star](#star-give-a-star)
-
-</details>
-
-## :bangbang: Folder Structure
-
-Here is the folder structure of this app.
-
-<!--- FOLDER_STRUCTURE_START --->
-```bash
+```text
 LinguaBird/
   |- actions/
-    |-- challenge-progress.ts
-    |-- user-progress.ts
-    |-- user-subscription.ts
+  |-- challenge-progress.ts
+  |-- user-progress.ts
+  |-- user-subscription.ts
   |- app/
-    |-- (auth)/
-    |-- (main)/
-    |-- (marketing)/
-    |-- admin/
-    |-- api/
-    |-- lesson/
-    |-- apple-icon.png
-    |-- favicon.ico
-    |-- globals.css
-    |-- icon1.png
-    |-- icon2.png
-    |-- layout.tsx
+  |-- (auth)/
+  |-- (main)/
+  |-- (marketing)/
+  |-- admin/
+  |-- api/
+  |-- lesson/
+  |-- apple-icon.png
+  |-- favicon.ico
+  |-- globals.css
+  |-- icon1.png
+  |-- icon2.png
+  |-- layout.tsx
   |- components/
-    |-- modals/
-    |-- ui/
-    |-- banner.tsx
-    |-- feed-wrapper.tsx
-    |-- mobile-header.tsx
-    |-- mobile-sidebar.tsx
-    |-- promo.tsx
-    |-- quests.tsx
-    |-- sidebar-item.tsx
-    |-- sidebar.tsx
-    |-- sticky-wrapper.tsx
-    |-- user-progress.tsx
+  |-- modals/
+  |-- ui/
+  |-- banner.tsx
+  |-- feed-wrapper.tsx
+  |-- mobile-header.tsx
+  |-- mobile-sidebar.tsx
+  |-- promo.tsx
+  |-- quests.tsx
+  |-- sidebar-item.tsx
+  |-- sidebar.tsx
+  |-- sticky-wrapper.tsx
+  |-- user-progress.tsx
   |- config/
-    |-- index.ts
+  |-- index.ts
   |- db/
-    |-- drizzle.ts
-    |-- queries.ts
-    |-- schema.ts
+  |-- drizzle.ts
+  |-- queries.ts
+  |-- schema.ts
   |- lib/
-    |-- admin.ts
-    |-- stripe.ts
-    |-- utils.ts
+  |-- admin.ts
+  |-- stripe.ts
+  |-- utils.ts
   |- public/
   |- scripts/
-    |-- prod.ts
+  |-- prod.ts
   |- store/
-    |-- use-exit-modal.ts
-    |-- use-hearts-modal.ts
-    |-- use-practice-modal.ts
+  |-- use-exit-modal.ts
+  |-- use-hearts-modal.ts
+  |-- use-practice-modal.ts
   |- .gitignore
   |- .prettierrc.json
   |- components.json
@@ -110,209 +80,242 @@ LinguaBird/
   |- tsconfig.json
   |- vercel.ts
 ```
-<!--- FOLDER_STRUCTURE_END --->
 
-<br />
+## Getting Started
 
-## :toolbox: Getting Started
+### Prerequisites
 
-1. Make sure **Git** and **NodeJS** is installed.
-2. Clone this repository to your local computer.
-3. Create `.env` file in **root** directory.
-4. Contents of `.env`:
+Make sure the following are installed on your computer:
 
-```env
-# .env
+* Git
+* Node.js
+* pnpm
 
-# disabled next.js telemetry
-NEXT_TELEMETRY_DISABLED=1
+### 1. Clone the Repository
 
-# clerk auth keys
+Clone the LinguaBird repository to your local computer.
 
-
-# neon db uri
-DATABASE_URL="postgresql://<user>:<password>@<host>:<post>/lingo?sslmode=require"
-
-# stripe api key and webhook
-
-# public app url
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-
-# clerk admin user id(s) separated by comma (,)
-
+```bash
+git clone <your-repository-url>
+cd LinguaBird
 ```
 
-5. Obtain Clerk Authentication Keys
-   1. **Source**: Clerk Dashboard or Settings Page
-   2. **Procedure**:
-      - Log in to your Clerk account.
-      - Navigate to the dashboard or settings page.
-      - Look for the section related to authentication keys.
-      - Copy the `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` provided in that section.
+### 2. Create the Environment File
 
-6. Retrieve Neon Database URI
-   1. **Source**: Database Provider (e.g., Neon, PostgreSQL)
-   2. **Procedure**:
-      - Access your database provider's platform or configuration.
-      - Locate the database connection details.
-      - Replace `<user>`, `<password>`, `<host>`, and `<port>` placeholders in the URI with your actual database credentials.
-      - Ensure to include `?sslmode=require` at the end of the URI for SSL mode requirement.
+Create a `.env` file in the root directory of the project.
 
-7. Fetch Stripe API Key and Webhook Secret
-   1. **Source**: Stripe Dashboard
-   2. **Procedure**:
-      - Log in to your Stripe account.
-      - Navigate to the dashboard or API settings.
-      - Find the section related to API keys and webhook secrets.
-      - Copy the `STRIPE_API_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`.
+```env
+# Disable Next.js telemetry
+NEXT_TELEMETRY_DISABLED=1
 
-8. Specify Public App URL
-   1. **Procedure**:
-      - Replace `http://localhost:3000` with the URL of your deployed application.
+# Clerk authentication keys
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-9. Identify Clerk Admin User IDs
-   1. **Source**: Clerk Dashboard or Settings Page
-   2. **Procedure**:
-      - Log in to your Clerk account.
-      - Navigate to the dashboard or settings page.
-      - Find the section related to admin user IDs.
-      - Copy the user IDs provided, ensuring they are separated by commas and spaces.
+# Neon database
+DATABASE_URL="postgresql://<user>:<password>@<host>:<port>/lingo?sslmode=require"
 
-10. Save and Secure:
-    - Save the changes to the `.env` file.
+# Stripe
+STRIPE_API_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
 
-11. Install Project Dependencies using `pnpm install`.
+# Public application URL
+NEXT_PUBLIC_APP_URL=http://localhost:3000
 
-12. Run the Seed Script:
+# Clerk admin user IDs
+# Multiple IDs can be separated by commas
+CLERK_ADMIN_USER_IDS=
+```
 
-In the same terminal, run the following command to execute the seed script:
+### 3. Configure Clerk
+
+Create or access your Clerk account and obtain the following authentication keys:
+
+* `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+* `CLERK_SECRET_KEY`
+
+Add these values to your `.env` file.
+
+### 4. Configure the Database
+
+LinguaBird uses PostgreSQL through Neon.
+
+Create a PostgreSQL database and obtain its connection URL.
+
+Replace the following placeholders with your actual database credentials:
+
+```text
+<user>
+<password>
+<host>
+<port>
+```
+
+The connection URL should follow this format:
+
+```env
+DATABASE_URL="postgresql://<user>:<password>@<host>:<port>/lingo?sslmode=require"
+```
+
+### 5. Configure Stripe
+
+If Stripe functionality is enabled in your installation, obtain the required Stripe credentials and add them to the `.env` file:
+
+```env
+STRIPE_API_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+```
+
+Keep these credentials private and never commit them to GitHub.
+
+### 6. Configure the Application URL
+
+For local development, use:
+
+```env
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+When deploying the application, replace this with your deployed application URL.
+
+### 7. Configure Admin Users
+
+Add the Clerk user ID of each administrator to:
+
+```env
+CLERK_ADMIN_USER_IDS=
+```
+
+For multiple administrators, separate the user IDs with commas.
+
+Example:
+
+```env
+CLERK_ADMIN_USER_IDS=user_123,user_456,user_789
+```
+
+### 8. Install Dependencies
+
+Install all project dependencies using pnpm:
+
+```bash
+pnpm install
+```
+
+### 9. Initialize the Database
+
+Push the database schema and seed the database:
 
 ```bash
 pnpm run db:push && pnpm run db:prod
 ```
 
-This command uses `tsx` to execute the Typescript file (`scripts/prod.ts`) and writes challenges data in database.
+The seed script populates the database with the required challenge data.
 
-13. Verify Data in Database:
+### 10. Start the Development Server
 
-Once the script completes, check your database to ensure that the challenges data has been successfully seeded.
+Start LinguaBird in development mode:
 
-14. Now app is fully configured 👍 and you can start using this app using either one of `pnpm dev`.
+```bash
+pnpm dev
+```
 
-**NOTE:** Please make sure to keep your API keys and configuration values secure and do not expose them publicly.
+The application will normally be available at:
 
-## :camera: Screenshots
+```text
+http://localhost:3000
+```
 
-![Modern UI/UX](/.github/images/img1.png "Modern UI/UX")
+## Tech Stack
 
-![Quests](/.github/images/img2.png "Quests")
+LinguaBird is built using the following technologies:
 
-![Shop](/.github/images/img3.png "Shop")
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* PostgreSQL
+* Drizzle ORM
+* Clerk
+* Stripe
+* Vercel
+* React Admin
+* Zustand
+* Radix UI
 
-## :gear: Tech Stack
+## Environment Variables
 
-[![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Vercel](https://skillicons.dev/icons?i=vercel "Vercel")](https://vercel.app/ "Vercel") [![Postgresql](https://skillicons.dev/icons?i=postgres "Postgresql")](https://www.postgresql.org/ "Postgresql")
+The following environment variables may be required for the application:
 
-## :wrench: Stats
+| Variable                            | Purpose                                |
+| ----------------------------------- | -------------------------------------- |
+| `NEXT_TELEMETRY_DISABLED`           | Disables Next.js telemetry             |
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Clerk public authentication key        |
+| `CLERK_SECRET_KEY`                  | Clerk server-side authentication key   |
+| `DATABASE_URL`                      | PostgreSQL database connection         |
+| `STRIPE_API_SECRET_KEY`             | Stripe API authentication              |
+| `STRIPE_WEBHOOK_SECRET`             | Stripe webhook verification            |
+| `NEXT_PUBLIC_APP_URL`               | Public application URL                 |
+| `CLERK_ADMIN_USER_IDS`              | IDs of users with administrator access |
 
-[![Stats for Lingo](/.github/images/stats.svg "Stats for Lingo")](https://pagespeed.web.dev/analysis?url=https://lingo-clone.vercel.app/ "Stats for Lingo")
+**Important:** Never commit your `.env` file or expose API keys, database credentials, authentication secrets, or webhook secrets publicly.
 
-## :raised_hands: Contribute
+## Contributing
 
-You might encounter some bugs while using this app. You are more than welcome to contribute. Just submit changes via pull request and I will review them before merging. Make sure you follow community guidelines.
+Contributions and improvements are welcome.
 
-## :gem: Acknowledgements
+If you find a bug or have an idea for improving LinguaBird:
 
-Useful resources and dependencies that are used in Lingo.
+1. Create a fork of the repository.
+2. Create a new branch for your changes.
+3. Make your changes.
+4. Test the application.
+5. Commit your changes.
+6. Create a pull request.
 
-- Special Thanks to Code with Antonio: https://codewithantonio.com/
-- Kenney Assets: https://kenney.nl/
-- Freesound: https://freesound.org/
-- Elevenlabs AI: https://elevenlabs.io/
-- Flagpack: https://flagpack.xyz/
+## Acknowledgements
 
-<!--- DEPENDENCIES_START --->
-- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^7.6.3
-- [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^1.1.0
-- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.2.6
-- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.1.19
-- [@radix-ui/react-progress](https://www.npmjs.com/package/@radix-ui/react-progress): ^1.1.14
-- [@radix-ui/react-separator](https://www.npmjs.com/package/@radix-ui/react-separator): ^1.1.15
-- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.3.3
-- [@types/node](https://www.npmjs.com/package/@types/node): ^25.9.1
-- [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.17
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.4
-- [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.5.4
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.0
-- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
-- [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
-- [dotenv](https://www.npmjs.com/package/dotenv): ^17.4.2
-- [drizzle-kit](https://www.npmjs.com/package/drizzle-kit): ^0.31.10
-- [drizzle-orm](https://www.npmjs.com/package/drizzle-orm): ^0.45.2
-- [eslint](https://www.npmjs.com/package/eslint): ^9
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.2.12
-- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^10.1.8
-- [lucide-react](https://www.npmjs.com/package/lucide-react): ^1.25.0
-- [next](https://www.npmjs.com/package/next): ^16.2.12
-- [pg](https://www.npmjs.com/package/pg): ^8.22.0
-- [postcss](https://www.npmjs.com/package/postcss): ^8
-- [prettier](https://www.npmjs.com/package/prettier): ^3.9.5
-- [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.8.0
-- [ra-data-simple-rest](https://www.npmjs.com/package/ra-data-simple-rest): ^5.15.0
-- [react](https://www.npmjs.com/package/react): ^19.2.8
-- [react-admin](https://www.npmjs.com/package/react-admin): ^5.15.1
-- [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): ^2.2.0
-- [react-confetti](https://www.npmjs.com/package/react-confetti): ^6.4.0
-- [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.8
-- [react-use](https://www.npmjs.com/package/react-use): ^17.6.1
-- [sonner](https://www.npmjs.com/package/sonner): ^2.0.7
-- [stripe](https://www.npmjs.com/package/stripe): ^22.4.0
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
-- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.19
-- [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
-- [tsx](https://www.npmjs.com/package/tsx): ^4.23.5
-- [typescript](https://www.npmjs.com/package/typescript): ^6
-- [zustand](https://www.npmjs.com/package/zustand): ^5.0.14
+LinguaBird was developed using various open-source libraries, frameworks, and resources.
 
-<!--- DEPENDENCIES_END --->
+Special thanks to the resources and technologies that contributed to the project:
 
-## :coffee: Buy Me a Coffee
+* Code with Antonio
+* Kenney Assets
+* Freesound
+* ElevenLabs
+* Flagpack
 
-[<img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" width="200" />](https://www.buymeacoffee.com/sanidhy "Buy me a Coffee")
+## Learn More
 
-## :rocket: Follow Me
+To learn more about the technologies used in LinguaBird, refer to their official documentation:
 
-[![Follow Me](https://img.shields.io/github/followers/sanidhyy?style=social&label=Follow&maxAge=2592000)](https://github.com/sanidhyy "Follow Me")
-[![Tweet about this project](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fx.com%2F_sanidhyy)](https://x.com/intent/tweet?text=Check+out+this+amazing+app:&url=https%3A%2F%2Fgithub.com%2Fsanidhyy%2Fduolingo-clone "Tweet about this project")
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* PostgreSQL
+* Drizzle ORM
+* Clerk
+* Stripe
 
-## :books: Learn More
+## Deploy on Vercel
 
-To learn more about Next.js, take a look at the following resources:
+LinguaBird can be deployed using Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Before deploying, make sure all required environment variables are configured in the Vercel project settings.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+After deployment, update:
 
-## :page_with_curl: Deploy on Vercel
+```env
+NEXT_PUBLIC_APP_URL
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+to the URL of your deployed application.
 
-Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
 
-## :star: Give A Star
+This project is provided for educational and development purposes.
 
-You can also give this repository a star to show more people and they can use this repository.
+---
 
-## :star2: Star History
-
-<a href="https://star-history.com/#sanidhyy/duolingo-clone&Timeline">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=sanidhyy/duolingo-clone&type=Timeline&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=sanidhyy/duolingo-clone&type=Timeline" />
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=sanidhyy/duolingo-clone&type=Timeline" />
-</picture>
-</a>
-
-<br />
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**LinguaBird** — Learn languages. Build skills. Keep growing.
