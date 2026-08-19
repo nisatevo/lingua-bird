@@ -14,6 +14,10 @@ declare global {
       // public app url
       NEXT_PUBLIC_APP_URL: string;
 
+      // optional Gemini key/model for AI speaking practice chat
+      GEMINI_API_KEY?: string;
+      GEMINI_MODEL?: string;
+
       // clerk admin user id(s) separated by comma (,)
       CLERK_ADMIN_IDS: string;
     }
