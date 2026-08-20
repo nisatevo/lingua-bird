@@ -31,16 +31,16 @@ export const Items = ({
     });
   };
 
-  const onUpgrade = () => {
-    toast.loading("Redirecting to checkout...");
-    startTransition(() => {
-      createStripeUrl()
-        .then((response) => {
-          if (response.data) window.location.href = response.data;
-        })
-        .catch(() => toast.error("Something went wrong."));
-    });
-  };
+  // const onUpgrade = () => {
+  //   toast.loading("Redirecting to checkout...");
+  //   startTransition(() => {
+  //     createStripeUrl()
+  //       .then((response) => {
+  //         if (response.data) window.location.href = response.data;
+  //       })
+  //       .catch(() => toast.error("Something went wrong."));
+  //   });
+  // };
 
   return (
     <ul className="w-full">
@@ -83,7 +83,7 @@ export const Items = ({
           </p>
         </div>
 
-        <Button onClick={onUpgrade} disabled={pending} aria-disabled={pending}>
+        <Button disabled={true} aria-disabled={true}>
           {hasActiveSubscription ? "settings" : "upgrade"}
         </Button>
       </div>
