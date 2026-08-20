@@ -1,11 +1,11 @@
-import { eq } from "drizzle-orm";
-import { headers } from "next/headers";
-import { NextResponse, type NextRequest } from "next/server";
-// import Stripe from "stripe";
+import { NextResponse } from "next/server";
 
-import db from "@/db/drizzle";
-import { userSubscription } from "@/db/schema";
-// import { stripe } from "@/lib/stripe";
+export async function POST() {
+  return NextResponse.json(
+    { error: "Stripe integration is not configured." },
+    { status: 503 }
+  );
+}
 
 // export async function POST(req: NextRequest) {
 //   const body = await req.text();

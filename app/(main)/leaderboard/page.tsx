@@ -9,28 +9,22 @@ import { StickyWrapper } from "@/components/sticky-wrapper";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { UserProgress } from "@/components/user-progress";
-import {
-  getTopTenUsers,
-  getUserProgress,
-  getUserSubscription,
-} from "@/db/queries";
+import { getTopTenUsers, getUserProgress } from "@/db/queries";
 
 const LeaderboardPage = async () => {
   await auth.protect();
 
   const userProgressData = getUserProgress();
-  const userSubscriptionData = getUserSubscription();
   const leaderboardData = getTopTenUsers();
 
-  const [userProgress, userSubscription, leaderboard] = await Promise.all([
+  const [userProgress, leaderboard] = await Promise.all([
     userProgressData,
-    userSubscriptionData,
     leaderboardData,
   ]);
 
   if (!userProgress || !userProgress.activeCourse) redirect("/courses");
 
-  const isPro = !!userSubscription?.isActive;
+  const isPro = false;
 
   return (
     <div className="flex flex-row-reverse gap-[48px] px-6">
